@@ -1,0 +1,31 @@
+body {
+    display:flex;
+    justify-content: center;
+    background-color: #343a40;
+    color: #f8f9fa;
+    font-family:monospace;
+    font-weight: 100;
+}
+
+header, footer {
+    font-weight: bold;
+}
+
+header {
+    font-size: 40px;
+}
+
+
+#ccl-body {
+    background-color: black;
+    border-color: #f8f9fa;
+    height: 40%;
+    width: 40%;
+
+}
+
+#ccl-screen {
+    padding-bottom: 50px;
+}
+
+

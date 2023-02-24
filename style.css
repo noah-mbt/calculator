@@ -1,31 +1,92 @@
 body {
-    display:flex;
-    justify-content: center;
     background-color: #343a40;
     color: #f8f9fa;
     font-family:monospace;
     font-weight: 100;
 }
 
+#omni {
+    position: relative;
+    min-height: 100vh;
+}
+
 header, footer {
     font-weight: bold;
+    text-align: center;
 }
 
 header {
     font-size: 40px;
+    position: relative;
+    top: 0;
 }
 
+#main {
+    display: flex;
+    justify-content: center;
+}
 
 #ccl-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     border-color: #f8f9fa;
-    height: 40%;
-    width: 40%;
+    height: 80%;
+    width: 75%;
+    margin-bottom: 40px;
 
 }
 
 #ccl-screen {
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    width: 90%;
+    height: 100%;
+    font-size: 48px;
+    margin-top: 50px;
+    padding: 50px 0px 
+}
+
+#ccl-buttons {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 50px 0px;
+}
+
+.btn {
+    color: #f8f9fa;
+    background-color: #034c7a;
+    border-radius: 8px;
+    width: 80px;
+    height: 50px;
+    padding: 20px;
+}
+
+#ccl-numbers {
+    width: 30%;
+}
+
+#ccl-operators {
+    width: 20%;
+}
+
+#del, #clear {
+    background-color: #F6BE00;
+    color: #343a40;
+    font-weight: bold;
 }
 
 
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #15181a;
+    width: 100%;
+    height: 2.5rem;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}

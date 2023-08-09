@@ -1,7 +1,7 @@
 body {
     background-color: #343a40;
     color: #f8f9fa;
-    font-family:monospace;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 100;
 }
 
@@ -19,6 +19,7 @@ header {
     font-size: 40px;
     position: relative;
     top: 0;
+    padding: 30px 0px;
 }
 
 #main {
@@ -64,6 +65,7 @@ header {
     width: 80px;
     height: 50px;
     padding: 20px;
+    margin-top: 5px;
 }
 
 #ccl-numbers {
@@ -82,7 +84,7 @@ header {
 
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: #15181a;
     width: 100%;

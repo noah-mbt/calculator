@@ -1,17 +1,32 @@
 const display = document.querySelector("#ccl-display");
-const zeroBtn = document.querySelector("#zero");
+
 const oneBtn = document.querySelector("#one");
 const twoBtn = document.querySelector("#two");
 const threeBtn = document.querySelector("#three");
+
 const fourBtn = document.querySelector("#four");
 const fiveBtn = document.querySelector("#five");
 const sixBtn = document.querySelector("#six");
+
 const sevenBtn = document.querySelector("#seven");
 const eightBtn = document.querySelector("#eight");
 const nineBtn = document.querySelector("#nine");
+
+const zeroBtn = document.querySelector("#zero");
 const decimalBtn = document.querySelector("#decimal")
+
 const clearBtn = document.querySelector("#clear")
 const deleteBtn = document.querySelector("#del")
+
+const multiplyBtn = document.querySelector("#multiply")
+const divideBtn = document.querySelector("#divide")
+
+const addBtn = document.querySelector("#add")
+const subtractBtn = document.querySelector("#subtract")
+
+const ansBtn = document.querySelector("#ans")
+const equalsBtn = document.querySelector("#equals")
+
 
 zeroBtn.addEventListener("click", () => {
     setNumber(0)
@@ -34,7 +49,6 @@ threeBtn.addEventListener("click", () => {
 fourBtn.addEventListener("click", () => {
     setNumber(4)
 });
-
 
 fiveBtn.addEventListener("click", () => {
     setNumber(5)
@@ -60,10 +74,29 @@ decimalBtn.addEventListener("click", () => {
     setNumber(".")
 });
 
-clearBtn.addEventListener("click", clear)
+clearBtn.addEventListener("click", clear);
 
-deleteBtn.addEventListener("click", remove)
+deleteBtn.addEventListener("click", remove);
 
+multiplyBtn.addEventListener("click", () => {
+    setNumber("*")
+});
+
+divideBtn.addEventListener("click", () => {
+    setNumber("/")
+});
+
+addBtn.addEventListener("click", () => {
+    setNumber("+")
+});
+
+subtractBtn.addEventListener("click", () => {
+    setNumber("-")
+});
+
+equalsBtn.addEventListener("click", () => {
+    operate();
+});
 
 
 function setNumber(x) {
@@ -72,11 +105,15 @@ function setNumber(x) {
 
 
 function clear() {
-    display.textContent = " ";
+    display.textContent = "";
 };
 
 
-function remove(string) {
-    string = display.textContent
-    return string.slice(0, -1)
+function remove() {
+    display.textContent.slice(0, -1)
+};
+
+
+function operate() {
+    display.textContent = eval(display.textContent)
 }

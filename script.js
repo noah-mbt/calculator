@@ -1,41 +1,82 @@
-const getElementId = document.getElementById
-const display = getElementId("ccl-display") 
+const display = document.querySelector("#ccl-display");
+const zeroBtn = document.querySelector("#zero");
+const oneBtn = document.querySelector("#one");
+const twoBtn = document.querySelector("#two");
+const threeBtn = document.querySelector("#three");
+const fourBtn = document.querySelector("#four");
+const fiveBtn = document.querySelector("#five");
+const sixBtn = document.querySelector("#six");
+const sevenBtn = document.querySelector("#seven");
+const eightBtn = document.querySelector("#eight");
+const nineBtn = document.querySelector("#nine");
+const decimalBtn = document.querySelector("#decimal")
+const clearBtn = document.querySelector("#clear")
+const deleteBtn = document.querySelector("#del")
 
-const zero = getElementId("zero")
-zero.addEventListener("click", () => {
-    getNumber(0)
+zeroBtn.addEventListener("click", () => {
+    setNumber(0)
+});
+
+oneBtn.addEventListener("click", () => {
+    setNumber(1)
+});
+
+twoBtn.addEventListener("click", () => {
+    setNumber(2)
 });
 
 
-const one = getElementId("one")
+threeBtn.addEventListener("click", () => {
+    setNumber(3)
+});
 
 
-const two = getElementId("two")
+fourBtn.addEventListener("click", () => {
+    setNumber(4)
+});
 
 
-const three = getElementId("three")
+fiveBtn.addEventListener("click", () => {
+    setNumber(5)
+});
+
+sixBtn.addEventListener("click", () => {
+    setNumber(6)
+});
+
+sevenBtn.addEventListener("click", () => {
+    setNumber(7)
+});
+
+eightBtn.addEventListener("click", () => {
+    setNumber(8)
+});
+
+nineBtn.addEventListener("click", () => {
+    setNumber(9)
+});
+
+decimalBtn.addEventListener("click", () => {
+    setNumber(".")
+});
+
+clearBtn.addEventListener("click", clear)
+
+deleteBtn.addEventListener("click", remove)
 
 
-const four = getElementId("four")
+
+function setNumber(x) {
+    display.textContent += x;
+};
 
 
-const five = getElementId("five")
+function clear() {
+    display.textContent = " ";
+};
 
 
-const six = getElementId("six")
-
-
-const seven = getElementId("seven")
-
-
-const eight = getElementId("eight")
-
-
-const nine = getElementId("nine")
-
-
-
-
-function getNumber(x) {
-    display.innerText = x;
+function remove(string) {
+    string = display.textContent
+    return string.slice(0, -1)
 }

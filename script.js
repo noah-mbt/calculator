@@ -71,7 +71,10 @@ nineBtn.addEventListener("click", () => {
 });
 
 decimalBtn.addEventListener("click", () => {
-    setNumber(".")
+    if (display.textContent.includes(".") == true) {
+        display.textContent += "";
+    };
+    setNumber(".");
 });
 
 clearBtn.addEventListener("click", clear);

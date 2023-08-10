@@ -14,6 +14,7 @@ const nineBtn = document.querySelector("#nine");
 
 const zeroBtn = document.querySelector("#zero");
 const decimalBtn = document.querySelector("#decimal")
+const times10 = document.querySelector("#x10")
 
 const clearBtn = document.querySelector("#clear")
 const deleteBtn = document.querySelector("#del")
@@ -67,19 +68,24 @@ eightBtn.addEventListener("click", () => {
 });
 
 nineBtn.addEventListener("click", () => {
-    setNumber(9)
+    setNumber(9)        
 });
 
 decimalBtn.addEventListener("click", () => {
-    if (display.textContent.includes(".") == true) {
+    if (display.textContent.includes(".")) {
         display.textContent += "";
     };
     setNumber(".");
 });
 
-clearBtn.addEventListener("click", clear);
+times10.addEventListener("click", () => {
+    addZero()       
+});
+
 
 deleteBtn.addEventListener("click", remove);
+
+clearBtn.addEventListener("click", clear);
 
 multiplyBtn.addEventListener("click", () => {
     setNumber("*")
@@ -119,4 +125,9 @@ function remove() {
 
 function operate() {
     display.textContent = eval(display.textContent)
+}
+
+
+function addZero() {
+    display.textContent += 0
 }

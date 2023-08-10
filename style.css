@@ -78,6 +78,10 @@ header {
     margin-top: 5px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .btn:hover {
     background-color: #086cab;
 }

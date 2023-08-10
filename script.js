@@ -72,9 +72,6 @@ nineBtn.addEventListener("click", () => {
 });
 
 decimalBtn.addEventListener("click", () => {
-    if (display.textContent.includes(".")) {
-        display.textContent += "";
-    };
     setNumber(".");
 });
 
@@ -109,6 +106,11 @@ equalsBtn.addEventListener("click", () => {
 
 
 function setNumber(x) {
+    if (display.textContent.includes(".")) {
+        decimalBtn.setAttribute("disabled", ""); 
+    } else {
+        decimalBtn.removeAttribute("disabled");
+    }
     display.textContent += x;
 };
 
